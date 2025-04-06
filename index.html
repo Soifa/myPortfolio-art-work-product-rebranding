@@ -1,23 +1,364 @@
 <!DOCTYPE html>
-<style>
-  /* netnet default bg */
-  body {
-    margin: 0;
-    background-image: linear-gradient(#515199a8 2px, transparent 1px),
-      linear-gradient(90deg, #515199a8 2px, transparent 1px);
-    background-size: 50px 50px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <title>Background</title>
+    <!-- FONT EMBED -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kirang+Haerang&family=Kite+One&display=swap" rel="stylesheet">
 
-  body::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(0deg, #c76ebca8, #515199a8);
-  }
-</style>
-    
+    <style>
+      body {
+        background-color: #FFED81;
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .webInfo {
+        width: 100vw;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        gap: 50px;
+      }
+
+      .section-title {
+        padding: 50px 100px 0px 100px;
+      }
+
+      .intro {
+        flex: 2;
+        max-width: 20%;
+      }
+
+      .intro h1 {
+        font-family: "Kirang Haerang", system-ui;
+        font-size: 8em;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.25em;
+        margin-bottom: 0em;
+      }
+
+      .intro h1 span:nth-child(1) {
+        color: #FF4491;
+      }
+
+      /* pastel pink */
+      .intro h1 span:nth-child(2) {
+        color: #00A0EC;
+      }
+
+      /* blue */
+      .intro h1 span:nth-child(3) {
+        color: #52B13A;
+      }
+
+      /* green */
+      .intro h1 span:nth-child(4) {
+        color: #D4A2FF;
+      }
+
+      /* lightPurple */
+      .intro h1 span:nth-child(5) {
+        color: #FF4491;
+      }
+
+      /* pastel pink */
+      .intro h1 span:nth-child(6) {
+        color: #00A0EC;
+      }
+
+      /* blue */
+      .intro h1 span:nth-child(7) {
+        color: #FE97AC;
+      }
+
+      /* light pink */
+
+      .intro h1 span:nth-child(8) {
+        color: #00A0EC;
+      }
+
+      /* blue */
+
+      .intro h1 span:nth-child(9) {
+        color: #52B13A;
+      }
+
+      /* green */
+
+      .intro h1 span:nth-child(10) {
+        color: #FF4491;
+      }
+
+      /* pastel pink */
+
+      .intro h1 span:nth-child(11) {
+        color: #D4A2FF;
+      }
+
+      /* lightPurple */
+
+      .intro h1 span:nth-child(12) {
+        color: #FF4491;
+      }
+
+      /* pastel pink */
+      .intro h1 span:nth-child(13) {
+        color: #00A0EC;
+      }
+
+      /* blue */
+      .intro h1 span:nth-child(14) {
+        color: #52B13A;
+      }
+
+      /* green */
+      .intro h1 span:nth-child(15) {
+        color: #D4A2FF;
+      }
+
+      /* lightPurple */
+      .intro h1 span:nth-child(16) {
+        color: #FF4491;
+      }
+
+      /* pastel pink */
+      .intro h1 span:nth-child(17) {
+        color: #00A0EC;
+      }
+
+      /* blue */
+      .intro h1 span:nth-child(18) {
+        color: #FE97AC;
+      }
+
+      /* light pink */
+
+      .intro p {
+        font-family: "Kite One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6;
+        font-size: 3em;
+        max-width: 37.5em;
+      }
+
+      .photo-wrapper {
+        flex: 1;
+        max-width: 100%;
+      }
+
+      .photo-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .poster-title {
+        font-family: "Kite One", sans-serif;
+        font-size: 3em;
+        padding: 0 100px;
+        color: black;
+        margin-top: 2em;
+      }
+
+      .poster-title p {
+        margin: 0;
+      }
+
+      .photo-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 20px;
+        white-space: nowrap;
+      }
+
+      .photo-item {
+        flex: 0 0 auto;
+        width: 400px;
+        color: #00A0EC;
+        font-family: "Kite One", sans-serif;
+        font-size: 2em;
+        max-width: 37.5em;
+        text-align: center;
+      }
+
+      .photo-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      .pdf-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #FFED81;
+      }
+
+      .pdf-viewer {
+        width: 80%;
+        height: 80vh;
+        border: none;
+      }
+
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+      }
+
+      .video-container iframe {
+        width: 80%;
+        height: 80vh;
+        border-radius: 12px;
+        border: none;
+      }
+
+      .nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #FFED81;
+        z-index: 1000;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+      }
+
+      .nav-bar ul {
+        list-style-type: none;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        margin: 0;
+        padding: 1em 2em;
+      }
+
+      .nav-bar li {
+        float: left;
+      }
+
+      .nav-bar li a {
+        position: relative;
+        display: block;
+        padding: 10px 40px;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        color: #FF4491;
+        border-bottom: 4px solid #FF4491;
+        transition: border-color 0.3s ease;
+      }
+
+      .nav-bar li a:hover {
+        border-bottom: 4px solid #00A0EC;
+      }
+
+      .nav-bar li a[href="#artwork"] {
+        color: #9747FF;
+        border-bottom: 4px solid #A020F0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="webInfo">
+      <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <ul>
+          <li><a href="https://soifa.github.io/myPortfolio-background/">Background</a></li>
+          <li><a href="https://soifa.github.io/myPortfolio-interest/">Interest</a></li>
+          <li><a href="https://soifa.github.io/myPortfolio-experience/">Experience</a></li>
+          <li><a href="https://soifa.github.io/myPortfolio-art-work/">Artwork</a></li>
+        </ul>
+      </div>
+
+      <!-- Product Rebranding Title -->
+      <div class="section-title">
+        <div class="intro">
+          <h1>
+            <span>P</span><span>r</span><span>o</span><span>d</span><span>u</span><span>c</span><span>t</span><span> </span><span>R</span><span>e</span><span>b</span><span>r</span><span>a</span><span>n</span><span>d</span><span>i</span><span>n</span><span>g</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Visual Identity -->
+      <div class="poster-title">
+        <p>Visual Identity</p>
+      </div>
+
+      <div class="pdf-container">
+        <embed src="Sofia_Xu_project2_part3-compressed_1.pdf" type="application/pdf" class="pdf-viewer">
+      </div>
+
+      <!-- Mock Up & Merch Title...-->
+      <div class="poster-title">
+        <p>Mock Up &amp Merch</p>
+      </div>
+
+      <div class="photo-scroll">
+        <!-- Mock Up Set -->
+        <div class="photo-item">
+          <img src="mockup-set copy.png" alt="Mock Up Set">
+        </div>
+
+        <!-- Mock Up Open -->
+        <div class="photo-item">
+          <img src="mockup blue2 copy-min.png" alt="Mock Up Open">
+        </div>
+
+        <!-- Mock Up Floss -->
+        <div class="photo-item">
+          <img src="floss.png" alt="Mock Up Floss">
+        </div>
+
+        <!-- Mock Up Card -->
+        <div class="photo-item">
+          <img src="card-min.png" alt="Mock Up Card">
+        </div>
+
+        <!-- Mock Up Toothpaste -->
+        <div class="photo-item">
+          <img src="Adobe Express - file.png" alt="Mock Up Toothpaste">
+        </div>
+        <!-- end of scroll gallery -->
+      </div>
+
+      <!-- YouTube AD Embed -->
+      <div class="poster-title">
+        <p>YouTube AD</p>
+      </div>
+
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6c8f2D7rC6c?si=iq9gFmEQ5qYkpMTx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Social Videos Embed -->
+      <div class="poster-title">
+        <p>Social Video</p>
+      </div>
+
+      <!-- Social Videos 1 -->
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/UCjtfp2W2hY" title="YouTube Shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <!-- Social Videos 2 -->
+        <iframe src="https://www.youtube.com/embed/8_nu9dSY5tI" title="YouTube Shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <!-- End of social Video embed -->
+
+    </div>
+  </body>
+</html>
